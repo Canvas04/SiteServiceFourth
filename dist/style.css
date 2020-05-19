@@ -1668,33 +1668,31 @@ span[aria-label='Go to slide 6'] {
   left: 90px;
   top: -5px; }
 
-.logo-of-companies__el_lg {
-  display: none; }
-
-.logo-of-companies {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-.logo-of-companies__el_sm {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 10px;
-  border: 1px solid #EAEAEA;
-  border-radius: 6px;
-  flex-basis: 30%;
-  margin-bottom: 16px; }
-
-.logo-of-companies__el_click {
-  display: none; }
-
-.logo-of-companies__el_hp-lg {
-  display: none; }
-
-.logo-of-companies__el_bosch-lg {
-  display: none; }
+@media (min-width: 768px) {
+  .logo-of-companies__el_lg {
+    display: none; }
+  .logo-of-companies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .logo-of-companies__el_sm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    flex-basis: 30%;
+    margin-bottom: 16px; }
+  .logo-of-companies__el_click {
+    display: none; }
+  .logo-of-companies__el_hp-lg {
+    display: none; }
+  .logo-of-companies__el_bosch-lg {
+    display: none; }
+  .swiper-pagination {
+    display: none; } }
 
 @font-face {
   font-family: 'swiper-icons';
