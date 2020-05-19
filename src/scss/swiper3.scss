@@ -1,0 +1,70 @@
+$backgroundButtonColor: #ff3e79;
+$colorServicesHeader: #7e7e82;
+$commonFontSize: 14px;
+
+.prices__block {
+  
+  display: flex;
+ flex-direction: column;
+   border-radius: 6px;
+   padding: 16px;
+   padding-bottom: 0;
+   
+   align-items: flex-start;
+   position: relative;
+}
+
+.prices__btn {
+   
+    display: flex;
+
+ 
+}
+
+.prices__btn_back {
+    background-color: $backgroundButtonColor;
+    border-radius: 20px;
+}
+
+.prices__text {
+    font-size: $commonFontSize;
+    line-height: 18px;
+    color: $colorMenuLink;
+    margin: 0;
+    margin-bottom: 16px;
+    
+}
+
+.prices__text-button {
+    font-size: $commonFontSize;
+    line-height: 18px;
+    color: $bgColorHeader;
+}
+.prices__icon {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/goside.svg);
+    background-repeat: no-repeat;
+}
+.prices__header {
+    font-size: $commonFontSize;
+    line-height: 16px;
+    color: $colorServicesHeader;
+    opacity: 0.72;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.prices__text-button_position {
+    margin: 4px 20px 4px 12px;
+}
+
+.prices__text_last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+    margin-bottom: 10px;
+}
+span[aria-label='Go to slide 6'] {
+    display: none;
+}

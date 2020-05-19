@@ -1,0 +1,23 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.footer__text {
+    opacity: 0.72;
+}
+.footer__text_team {
+    margin-top: -15px;
+}
+.footer__text_page {
+    margin-top: -15px;
+    margin-bottom: $marginCommon;
+}
+.footer__text_policy {
+    margin-top: 0;
+    margin-bottom: $marginCommon;
+}
+.footer__text_info {
+    margin-top: 0;
+}

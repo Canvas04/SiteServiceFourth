@@ -1,0 +1,57 @@
+.popup__menu {
+    min-width: 272px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    padding-top: 19px;
+    padding-left: 24px;
+    padding-bottom: 32px;
+    padding-right: 24px;
+    box-shadow: 10px 0px 20px  0 #c2c1be;
+
+}
+
+.popup__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.popup__link {
+    color: #1B1C21;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.popup__item {
+    margin-bottom: 32px;
+}
+
+.popup__item_last {
+    margin-bottom: 0;
+}
+.popup__tem_marked {
+    margin-top: 50px;
+    margin-bottom: 32px;
+}
+
+.popup__link_marked {
+    font-size: 16px;
+    color: #7E7E82;
+    position: relative;
+    font-weight: normal;
+}
+
+.popup__link_marked::before {
+    content: '';
+    width: 4px;
+    height: 32px;
+    background-image: url(../img/highlight.svg);
+    position: absolute;
+    left: -25px;
+    top: -5px;
+}

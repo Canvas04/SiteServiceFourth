@@ -1,0 +1,53 @@
+
+
+.footer-popup {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-popup__item_mail {
+    font-size: 16px;
+    color: #1B1C21;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+.footer-popup__item_tel {
+    font-size: 24px;
+    list-style: 32px;
+    color: #1B1C21;
+    letter-spacing: -0.6px;
+    flex-basis: 50%;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 12px;
+}
+
+.footer-popup__item_lang {
+    color: #1B1C21;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-popup__lang_ru {
+    color: #7E7E82;
+}
+
+.footer-popup__lang_ch {
+    flex-basis: 70%;
+}
+
+
+
+.footer-popup__link_mail {
+    text-decoration: none;
+color: #1B1C21;
+}
+.footer-popup__link_tel {
+text-decoration: none;
+color: #1B1C21;
+}

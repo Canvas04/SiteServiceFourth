@@ -1,0 +1,74 @@
+.popup__burger {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/close.svg);
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.popup__logo {
+    width: 100px;
+    height: 60px;
+    background-image: url(../img/Group.svg);
+    background-repeat: no-repeat;
+}
+
+.popup__search {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+.popup__call {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/call.svg);
+    background-repeat: no-repeat;
+}
+
+.popup__chat {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/chat.svg);
+    background-repeat: no-repeat;
+}
+
+.popup__profile {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/profile.svg);
+    background-repeat: no-repeat;
+}
+
+.popup__main-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup__logo {
+    flex-basis: 55%;
+}
+
+.popup__minor-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup__profile {
+    flex-basis: 60%
+}
+
+
+
+.popup-button {
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.popup-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

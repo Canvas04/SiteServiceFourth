@@ -1,0 +1,36 @@
+$borderSlideColor: #eaeaea;
+@media (min-width: 768px) {
+    .logo-of-companies__el_lg {
+        display: none;
+    }
+
+    .logo-of-companies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .logo-of-companies__el_sm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: $bgColorHeader;
+        padding: 10px;
+        border: 1px solid $borderSlideColor;
+        border-radius: 6px;
+        flex-basis: 30%;
+        margin-bottom: $marginCommon;
+    }
+    .logo-of-companies__el_click {
+        display: none;
+    }
+    .logo-of-companies__el_hp-lg {
+        display: none;
+    }
+    .logo-of-companies__el_bosch-lg {
+        display: none;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}

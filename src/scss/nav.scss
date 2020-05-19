@@ -1,0 +1,38 @@
+$colorMenuLink: #1b1c21;
+$colorBorderMenuBlueLink: #b8ffec;
+$bgColorBlueMenuLink: #ffffff;
+.menu {
+    margin-top: 20px;
+    margin-left: 16px;
+    overflow-x: auto;
+}
+.menu__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+    min-width: 1120px;
+    overflow-x: auto;
+    justify-content: space-between;
+}
+.menu__item {
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.menu__item_blue {
+    border: 2px solid $colorBorderMenuBlueLink;
+    background-color: $bgColorBlueMenuLink;
+}
+.menu__link {
+    text-decoration: none;
+    color: $colorMenuLink;
+    font-size: 16px;
+    display: block;
+    transition: opacity 1s;
+}
+.menu__link:hover{
+    opacity: 0.4;
+}
+

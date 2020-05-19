@@ -1,0 +1,42 @@
+$hrColor: #D9FFF5;
+$marginCommon: 16px;
+.warn {
+    display: flex;
+    margin: 0px 16px 0px 16px;
+  
+    padding-right: 20px;
+    color: $colorMenuLink;
+    flex-direction: column;
+}
+.warn__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: $colorMenuLink;
+    position: relative;
+}
+.warn__link:hover {
+    text-decoration: underline;
+}
+
+.warn__link::after {
+    content: '';
+    background-image: url(../img/more.svg);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -4px;
+}
+@media (min-width: 240px) and (max-width: 345px) {
+    .warn__link::after {
+        top: 15px;
+    }
+}
+.hr-blue {
+    color: $hrColor;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+.warn__text {
+    margin-top: 0;
+}

@@ -1,0 +1,26 @@
+$borderSwiperColor: #EAEAEA;
+$backgroundSlideColor: #ffffff;
+
+.services__el {
+padding: 16px;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+border-radius: 6px;
+border: 1px solid $borderSwiperColor;
+background-color: $backgroundSlideColor;
+}
+
+.next {
+    background-image: url(../img/go.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    align-self: flex-end;
+}
+.services__text {
+    margin-bottom:120px;
+    align-self: flex-start;
+}

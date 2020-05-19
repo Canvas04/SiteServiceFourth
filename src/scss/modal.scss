@@ -1,0 +1,89 @@
+$borderColorInputModal: #eaeaea;
+
+.modal {
+    background-color: $bgColorHeader;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    max-width: 320px;
+    box-shadow: 10px 0px 20px  0 #c2c1be;
+}
+.modal__icon {
+    background-image: url(../img/close.svg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.modal__form {
+    margin-top: 40px;
+}
+.modal__promo-text {
+    font-size: 24px;
+    line-height: 32px;
+    color: $colorMenuLink;
+}
+.modal__promo-text::before {
+    content: "";
+    background-image: url(../img/highlight.svg);
+    width: 4px;
+    height: 40px;
+    position: absolute;
+    left: -15px;
+    top: 20px;
+}
+.modal__input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid $borderColorInputModal;
+    background-color: $bgColorHeader;
+    flex-basis: 100%;
+}
+.modal-feedback__input_margin {
+    margin-bottom: $marginCommon;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 342px;
+    position: relative;
+}
+.modal__label-el {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal__button {
+    align-self: flex-end;
+}
+.modal__link-policy {
+    color: $backgroundButtonColor;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 3s;
+}
+.modal__link-policy:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+.modal__button {
+    background-color: $backgroundButtonColor;
+    border-radius: $marginCommon;
+}
+.modal__text {
+    margin: 8px 38px 8px 8px;
+    color: $bgColorHeader;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: relative;
+}
+.modal__text::after {
+content: '';
+background-image: url(../img/goside.svg);
+width: 20px;
+height: 20px;
+position: absolute;
+left: 90px;
+top: -5px;
+}
