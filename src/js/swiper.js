@@ -11,7 +11,7 @@ linkShow.addEventListener('click', (ev) => {
     for (const el of hiddenEl) {
         el.style.display = 'flex';
         el.style.justifyContent = 'space-between';
-        el.style.marginTop = '-5px';
+        
     }
 
     linkShow.style.display = 'none';

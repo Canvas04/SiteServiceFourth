@@ -6,20 +6,21 @@
         flex-wrap: wrap;
     }
     .services__el {
-        flex-basis: 20%;
-        margin-right: 32px;
+        flex-basis: 30.5%;
+        margin-right: 24px;
         height: 160px !important;
     }
-
-    .services__el_fourth {
+    .services__el_thirth {
         margin-right: 0;
     }
+.services__el_sixth {
+    margin-right:  0;
+}
     .services__link-block {
         flex-basis: 85%;
-       
     }
     .services__link-block_down {
-        margin-top:24px;
+        margin-top: 24px;
     }
     .services__link {
         text-decoration: none;
@@ -28,21 +29,16 @@
         line-height: 24px;
         font-style: normal;
         position: relative;
-       
     }
     .services__link:hover {
         text-decoration: underline;
     }
-    .services__el_eight {
-        margin-right: 0;
-    }
+    
 
     .services__el_last {
-        position: relative;
-        left: -34%;
-        margin-top: 24px;
-      
-    }
+        margin-right: 0;
+       
+}
     .services__el_click {
         margin-top: 24px;
     }

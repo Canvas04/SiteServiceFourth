@@ -19,9 +19,9 @@ $borderSlideColor: #eaeaea;
         padding: 10px;
         border: 1px solid $borderSlideColor;
         border-radius: 6px;
-        flex-basis: 25%;
+        flex-basis: 28.5%;
         margin-bottom: $marginCommon;
-        margin-right: 16px;
+        margin-right: 24px;
     }
     .logo-of-companies__el_click {
         display: none;
@@ -70,16 +70,25 @@ $borderSlideColor: #eaeaea;
         justify-content: space-between;
         background-color: $bgColorHeader;
         padding: 10px;
-        flex-basis: 25%;
+        flex-basis: 28.5%;
         border-radius: 6px;
         margin-top: -10px;
-        margin-right: 16px;
+        margin-right: 24px;
         border: 1px solid $borderSlideColor;
     }
+    .logo-of-companies__el_thirth {
+        margin-right:0;
+    }
+    .logo-of-companies__el_sixth {
+        margin-right: 0;
+    }
+    .logo-of-companies__el_ninth {
+        margin-right: 0;
+    }
     .logo-of-companies__el_click-last {
-        flex-basis: 25%;
+        
         position: relative;
-        left: -30%;
+        left: -32%;
         
     }
 
