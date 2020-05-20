@@ -35,4 +35,69 @@ $borderSlideColor: #eaeaea;
     .swiper-pagination {
         display: none;
     }
+    .logo-of-companies__link-block_down {
+        display: block;
+        flex-basis: 83%;
+        position: relative;
+    }
+    .pseudo-el-down::before {
+        content: "";
+        background-image: url(../img/down.svg);
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 40px;
+        top: 5px;
+        left: -20px;
+        color: $colorMenuLink;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .logo-of-companies__link {
+        text-decoration: none;
+        color: #1b1c21;
+        font-size: 16px;
+        line-height: 24px;
+        font-style: normal;
+        position: relative;
+    }
+    .logo-of-companies__link:hover {
+        text-decoration: underline;
+    }
+    .logo-of-companies__el_click {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        background-color: $bgColorHeader;
+        padding: 10px;
+        flex-basis: 25%;
+        border-radius: 6px;
+        margin-top: -10px;
+        margin-right: 16px;
+        border: 1px solid $borderSlideColor;
+    }
+    .logo-of-companies__el_click-last {
+        flex-basis: 25%;
+        position: relative;
+        left: -30%;
+        
+    }
+
+    .logo-of-companies__link-block_up {
+        flex-basis: 85%;
+    }
+    .pseudo-el-up::before {
+        content: "";
+        background-image: url(../img/down.svg);
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 40px;
+        top: 5px;
+        left: -20px;
+        color: $colorMenuLink;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
 }
