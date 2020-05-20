@@ -586,8 +586,14 @@ function initSwiper() {
         swiper1 = undefined;
         swiper2 = undefined;
         swiper3 = undefined;
-        swiperWrap.removeAttribbute('style');
-        swiperSlide.removeAttribbute('style');
+        for( const el of swiperWrap) {
+            el.removeAttribute('style');
+         }
+        for( const elem of swiperSlide) {
+            elem.removeAttribute('style');
+        }
+        
+        
     }
 
 }
