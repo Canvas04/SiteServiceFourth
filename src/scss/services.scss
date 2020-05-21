@@ -93,4 +93,16 @@ $colorServicesHeader: #7E7E82;
     .warn__link {
         flex-basis: 100%;
     }
+    .footer {
+        flex-direction: row;
+        margin-left: 24px;
+        margin-right: 24px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+    .footer__text_year {
+        margin-top: 0;
+        text-align: left;
+    }
 }
