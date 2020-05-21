@@ -55,3 +55,12 @@
     left: -25px;
     top: -5px;
 }
+
+@media (min-width: 768px) {
+    .popup__minor-icons {
+        margin-top: 268px
+    }
+    .popup {
+        height: 100%;
+    }
+}
