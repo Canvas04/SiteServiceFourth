@@ -1,13 +1,16 @@
 $bgcolor: #f8f8f8;
-html, .body {
+html,
+.body {
     font-family: "TT Lakes";
     background-color: $bgcolor;
     overflow-x: hidden;
-    overflow-y:auto;
+    overflow-y: auto;
     height: 100%;
     position: relative;
-    bottom:0;
+    bottom: 0;
 }
-.main {
-    
+@media (min-width: 1336px) {
+    .main {
+        margin-left: 320px;
+    }
 }

@@ -1,7 +1,7 @@
 const burgerEl = document.querySelector('.icons-and-header__icon_burger');
 export const mainContent = document.querySelector('.main');
 export const footer = document.querySelector('.footer');
-const closeEl = document.querySelector('.popup__burger');
+let closeEl = document.querySelector('.popup__burger');
 const popupMenu = document.querySelector('.popup');
 
 popupMenu.style.position = 'absolute';
@@ -54,5 +54,22 @@ function screenTest(mq) {
             footer.style.display = 'flex';
             footer.style.opacity = 1;
         })
+    }
+}
+// Для разрешения 1366px
+if (matchMedia) {
+    const mq = window.matchMedia('(min-width: 1366px)');
+    mq.addListener(screen);
+    screen(mq);
+}
+
+function screen(mq) {
+    if(mq.matches) {
+        popupMenu.style.position = 'fixed'
+        popupMenu.style.left = 0;
+        popupMenu.style.top = 0;
+        closeEl.style.display = 'none';
+    }else {
+        popupMenu.style.left = '-1000px';
     }
 }

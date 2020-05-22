@@ -9,7 +9,7 @@ const modalHeaderEl = document.querySelector('.modal__promo-text');
 let modalHiddenInput = document.querySelectorAll('.modal__input_hidden');
 
 const orderCallBtn = document.querySelectorAll('.prices__btn');
-console.log(orderCallBtn);
+
 
 const listenerFuncCommercial = function (ev) {
     ev.preventDefault();
