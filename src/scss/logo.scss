@@ -8,7 +8,7 @@ $borderSlideColor: #eaeaea;
         display: flex;
         flex-wrap: wrap;
      justify-content: center;
-        align-content: flex-start;
+        // align-content: flex-start;
     }
 
     .logo-of-companies__el_sm {
@@ -19,7 +19,7 @@ $borderSlideColor: #eaeaea;
         padding: 10px;
         border: 1px solid $borderSlideColor;
         border-radius: 6px;
-        flex-basis: 28.5%;
+        flex-basis: 27.5%;
         margin-bottom: $marginCommon;
         margin-right: 24px;
     }

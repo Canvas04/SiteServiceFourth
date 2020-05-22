@@ -8,8 +8,8 @@ const commercialLink = document.querySelector('.warn__link');
 const modalHeaderEl = document.querySelector('.modal__promo-text');
 let modalHiddenInput = document.querySelectorAll('.modal__input_hidden');
 
-const orderCallBtn = document.querySelector('.prices__btn');
-
+const orderCallBtn = document.querySelectorAll('.prices__btn');
+console.log(orderCallBtn);
 
 const listenerFuncCommercial = function (ev) {
     ev.preventDefault();
@@ -26,13 +26,15 @@ closeModalEl.addEventListener('click', function (ev) {
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
 });
-orderCallBtn.addEventListener('click', function (ev) {
-  
+for (const el of orderCallBtn ) {
+    el.addEventListener('click', function (ev) {
     mainContent.style.display = 'none';
     footer.style.display = 'none';
     modalEl.style.display = 'block';
     for(let el of modalHiddenInput) {
         el.style.display = 'none'
     }
+    
  
 });
+}
