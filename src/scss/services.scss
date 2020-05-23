@@ -69,6 +69,8 @@ $colorServicesHeader: #7E7E82;
         margin-left: 40px;
         margin-right: 40px;
         justify-content: space-between;
+        margin-top: 31px;
+        margin-bottom: 16px;
     }
     .prices-header__block {
         display: flex;
@@ -107,5 +109,16 @@ $colorServicesHeader: #7E7E82;
     }
     .footer__text_policy {
         flex-basis: 40%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .prices__block {
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+    .footer {
+        margin-left: 352px;
+        margin-right: 32px;
     }
 }

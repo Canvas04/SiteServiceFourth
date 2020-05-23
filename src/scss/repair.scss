@@ -57,7 +57,7 @@
         margin-right: 24px;
     }
     .services__el {
-        flex-basis: 21.5%;
+        flex-basis: 22%;
     }
     .services__el_sixth {
         margin-right: 24px;
@@ -65,10 +65,12 @@
     .services__el_eight {
         margin-right: 0;
     }
-    .services__el_last {
-       display: none;
-    }
+    
     .services__link-block_up {
-        display: none;
+        margin-top: 20px;
+    }
+    .services__el_last {
+        position: relative;
+        left: -36%;
     }
 }

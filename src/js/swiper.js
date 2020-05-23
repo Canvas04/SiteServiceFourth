@@ -28,6 +28,7 @@ linkHidden.addEventListener('click', (ev) => {
 
 // Прописываю логику для второго свайпера
 let hiddenElRepair = document.querySelectorAll('.services__el_click');
+let disabledEl = document.querySelector('.services__el_last')
 for (const el of hiddenElRepair) {
     el.style.display = 'none';
 }
@@ -39,6 +40,7 @@ linkHiddenSecond.addEventListener('click', (ev) => {
     for (const el of hiddenElRepair) {
         el.style.display = 'flex';
     }
+    
 })
 
 let linkShowSecond = document.querySelector('.services__link_up');
