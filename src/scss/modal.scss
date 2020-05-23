@@ -6,7 +6,7 @@ $borderColorInputModal: #eaeaea;
     flex-direction: column;
     padding: 16px;
     max-width: 320px;
-    box-shadow: 10px 0px 20px  0 #c2c1be;
+    box-shadow: 10px 0px 20px 0 #c2c1be;
 }
 .modal__icon {
     background-image: url(../img/close.svg);
@@ -79,11 +79,25 @@ $borderColorInputModal: #eaeaea;
     position: relative;
 }
 .modal__text::after {
-content: '';
-background-image: url(../img/goside.svg);
-width: 20px;
-height: 20px;
-position: absolute;
-left: 90px;
-top: -5px;
+    content: "";
+    background-image: url(../img/goside.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 90px;
+    top: -5px;
+}
+@media (min-width: 1366px) {
+    .modal {
+        position: absolute;
+        right: 0;
+    }
+    .modal__icon {
+        position: relative;
+        left: -90px;
+    }
+    .modal-feedback__input_margin {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 }

@@ -14,7 +14,7 @@ const orderCallBtn = document.querySelectorAll('.prices__btn');
 const listenerFuncCommercial = function (ev) {
     ev.preventDefault();
     modalHeaderEl.textContent = 'Обратная связь';
-   
+
     mainContent.style.display = 'none';
     footer.style.display = 'none';
     modalEl.style.display = 'block';
@@ -26,15 +26,15 @@ closeModalEl.addEventListener('click', function (ev) {
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
 });
-for (const el of orderCallBtn ) {
+for (const el of orderCallBtn) {
     el.addEventListener('click', function (ev) {
-    mainContent.style.display = 'none';
-    footer.style.display = 'none';
-    modalEl.style.display = 'block';
-    for(let el of modalHiddenInput) {
-        el.style.display = 'none'
-    }
-    
- 
-});
+        mainContent.style.display = 'none';
+        footer.style.display = 'none';
+        modalEl.style.display = 'block';
+        for (let el of modalHiddenInput) {
+            el.style.display = 'none'
+        }
+
+
+    });
 }
