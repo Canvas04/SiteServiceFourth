@@ -42,7 +42,7 @@
     margin: 0;
     border-radius: 6px;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1365px) {
     .content {
         flex-direction: row;
         margin: 32px 0;
@@ -67,10 +67,11 @@
     
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1366px) {
     .content {
         flex-direction: row;
-        margin: 32px 0;
+        margin: 32px 34px;
+        margin-right: 28px;
         justify-content: space-around;
     }
     .content__text {

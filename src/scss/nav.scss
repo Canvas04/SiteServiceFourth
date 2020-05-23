@@ -36,3 +36,14 @@ $bgColorBlueMenuLink: #ffffff;
     opacity: 0.4;
 }
 
+@media (min-width: 1366px) {
+    .menu {
+        margin-left: 34px;
+        margin-right: 34px;
+overflow-x: hidden;
+    }
+    .menu__list {
+        min-width: auto;
+    }
+
+}

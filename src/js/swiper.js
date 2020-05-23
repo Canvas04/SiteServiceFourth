@@ -54,3 +54,23 @@ linkShowSecondBlock.style.display = 'none';
     linkShowSecond.style.display = 'none';
     linkHiddenSecond.style.display = 'block';
 });
+
+let imgBosch = document.querySelector('.logo-of-companies__img_bosch');
+let imgHp = document.querySelector('.logo-of-companies__img_hp');
+let imgAcer = document.querySelector('.logo-of-companies__img_acer');
+let imgView = document.querySelector('.logo-of-companies__img_viewSonic');
+
+if (matchMedia) {
+    const mq = window.matchMedia('(min-width: 1366px)');
+    mq.addListener(screenTest);
+    screenTest(mq);
+}
+function screenTest(mq) {
+    if (mq.matches) {
+        imgBosch.src = './img/viewSonic.svg';
+        imgHp.src = './img/bosch.svg';
+        imgAcer.src = './img/hp.svg';
+        imgView.src = './img/acer.svg';
+        
+    }
+}

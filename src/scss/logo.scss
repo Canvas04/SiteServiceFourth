@@ -1,5 +1,5 @@
 $borderSlideColor: #eaeaea;
-@media (min-width: 768px) {
+@media (min-width: 768px)  {
     .logo-of-companies__el_lg {
         display: none;
     }
@@ -9,6 +9,7 @@ $borderSlideColor: #eaeaea;
         flex-wrap: wrap;
      justify-content: center;
         // align-content: flex-start;
+        margin-bottom: 50px;
     }
 
     .logo-of-companies__el_sm {
@@ -109,4 +110,58 @@ $borderSlideColor: #eaeaea;
         font-size: 16px;
     }
     
+}
+
+@media (min-width: 1366px) {
+    .logo-of-companies__link-block_up {
+        flex-basis: 90%;
+    }
+    .logo-of-companies__link-block_down {
+        flex-basis: 90%;
+    }
+
+    .logo-of-companies__el_sm {
+        display: none;
+    }
+    .logo-of-companies__el_lg {
+        display: block;
+        border-radius: 6px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-basis: 21.5%;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px;
+    }
+    .logo-of-companies__el_thirth {
+        margin-right: 24px;
+    }
+    .logo-of-companies__el_fourth  {
+        margin-right: 0;
+    }
+    .logo-of-companies__el_sixth {
+        margin-right: 24px;
+    }
+    .logo-of-companies__el_seventh  {
+        margin-right: 24px;
+       
+    }
+    .logo-of-companies__el_click-disabled {
+        display: none !important;
+    }
+    .logo-of-companies__el_click {
+        flex-basis: 19.5%;
+        margin-top: 0px;
+    }
+   .logo-of-companies__el_ninth {
+       position: relative;
+       margin-right: 24px;
+   }
+.logo-of-companies__el_click-last {
+    position: static;
+    margin-right: 0;
+
+}
 }
