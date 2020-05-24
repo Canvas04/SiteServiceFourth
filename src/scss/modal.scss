@@ -89,15 +89,25 @@ $borderColorInputModal: #eaeaea;
 }
 @media (min-width: 1366px) {
     .modal {
-        position: absolute;
-        right: 0;
+       height: 100%;
+        max-width: 400px;
     }
     .modal__icon {
         position: relative;
         left: -90px;
+        top: 36px;
     }
     .modal-feedback__input_margin {
-        margin-left: 32px;
-        margin-right: 32px;
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+    .modal__form {
+        margin-top: -20px;
+    }
+    .modal__button {
+        margin-right: 22px;
+    }
+    .modal__promo-text {
+        margin-left: 22px;
     }
 }

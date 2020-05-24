@@ -1,8 +1,8 @@
 const burgerEl = document.querySelector('.icons-and-header__icon_burger');
-export const mainContent = document.querySelector('.main');
-export const footer = document.querySelector('.footer');
+export let mainContent = document.querySelector('.main');
+export let footer = document.querySelector('.footer');
 let closeEl = document.querySelector('.popup__burger');
-const popupMenu = document.querySelector('.popup');
+export let popupMenu = document.querySelector('.popup');
 
 popupMenu.style.position = 'absolute';
 popupMenu.style.left = '-1000px';
