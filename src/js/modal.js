@@ -15,6 +15,10 @@ const listenerFuncCommercial = function (ev) {
     ev.preventDefault();
     modalHeaderEl.textContent = 'Обратная связь';
 
+for(let el of modalHiddenInput ) {
+    el.style.display = 'block';
+    
+}    
     mainContent.style.display = 'none';
     footer.style.display = 'none';
     modalEl.style.display = 'block';
