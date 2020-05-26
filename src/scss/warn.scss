@@ -33,9 +33,11 @@ $marginCommon: 16px;
     }
 }
 .hr-blue {
-    color: $hrColor;
+    background-color: $hrColor;
     margin-top: 40px;
     margin-bottom: 16px;
+    height: 2px;
+    border: 0;
 }
 .warn__text {
     margin-top: 0;

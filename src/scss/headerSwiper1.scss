@@ -16,14 +16,4 @@ $borderColorHeaderSwiper: #D9FFF5;
     color: #7e7e82;
     text-transform: uppercase;
 }
-@media (min-width: 768px) {
-    .head {
-        background-image: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
-    }
-}
- 
-@media (min-width: 1120px) {
-    .head {
-        background-image: linear-gradient(270deg, #f8f8f8 0%, #ffffff 98.61%);
-    }
-}
+
