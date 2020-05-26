@@ -1,7 +1,10 @@
 import { mainContent, footer, popupMenu } from './popup.js';
 
 let modalEl = document.querySelector('.modal');
-modalEl.style.display = 'none';
+modalEl.style.position = 'absolute';
+modalEl.style.left = '-1000px';
+modalEl.style.transitionProperty = 'left';
+modalEl.style.transitionDuration = '2s';
 
 const closeModalEl = document.querySelector('.modal__icon')
 const commercialLink = document.querySelector('.warn__link');
@@ -21,17 +24,22 @@ for(let el of modalHiddenInput ) {
 }    
     mainContent.style.display = 'none';
     footer.style.display = 'none';
-    modalEl.style.display = 'block';
+    modalEl.style.left = '0px';
 }
 commercialLink.addEventListener('click', listenerFuncCommercial);
 
 closeModalEl.addEventListener('click', function (ev) {
-    modalEl.style.display = 'none';
+    modalEl.style.left = '-1100px';
+
+    modalEl.style.transitionProperty = 'left';
+    modalEl.style.transitionDuration = '2s';
+
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
 });
 for (const el of orderCallBtn) {
     el.addEventListener('click', function (ev) {
+        modalHeaderEl.textContent = 'Заказать звонок';
         mainContent.style.display = 'none';
         footer.style.display = 'none';
         modalEl.style.display = 'block';
@@ -70,7 +78,11 @@ function screenWidth(mq) {
 
         }
         closeModalEl.addEventListener('click', function (ev) {
-            modalEl.style.display = 'none';
+            // modalEl.style.display = 'none';
+            modalEl.style.left = '-1000px';
+            modalEl.style.transitionProperty = 'left';
+            modalEl.style.transitionDuration = '2s';
+
             mainContent.style.opacity = 1;
             footer.style.opacity = 1;
             popupMenu.style.opacity = 1;
