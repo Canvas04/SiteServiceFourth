@@ -26,6 +26,22 @@ const listenerFuncCommercial = function (ev) {
     modalEl.classList.add('modal_position-commerical-md-after');
 
 }
+
+const listenerFuncBtn = function (ev) {
+    modalHeaderEl.textContent = 'Заказать звонок';
+    mainContent.style.display = 'none';
+    footer.style.display = 'none';
+
+    ('modal_position-commerical-md-before');
+    modalEl.classList.add('modal_position-commerical-md-after');
+    modalEl.style.animationFillMode = 'forwards';
+    modalEl.style.height = '100%'
+
+    for (let el of modalHiddenInput) {
+        el.style.display = 'none'
+    }
+
+}
 commercialLink.addEventListener('click', listenerFuncCommercial);
 
 
@@ -39,23 +55,11 @@ closeModalEl.addEventListener('click', function (ev) {
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
 });
+
+
+
 for (const el of orderCallBtn) {
-    el.addEventListener('click', function (ev) {
-        modalHeaderEl.textContent = 'Заказать звонок';
-        mainContent.style.display = 'none';
-        footer.style.display = 'none';
-
-        ('modal_position-commerical-md-before');
-        modalEl.classList.add('modal_position-commerical-md-after');
-        modalEl.style.animationFillMode = 'forwards';
-        modalEl.style.height = '100%'
-
-        for (let el of modalHiddenInput) {
-            el.style.display = 'none'
-        }
-
-
-    });
+    el.addEventListener('click', listenerFuncBtn);
 }
 
 // Для разрешения 1366px
@@ -67,13 +71,18 @@ if (matchMedia) {
 }
 function screenWidth(mq) {
     if (mq.matches) {
-        modalEl.classList.add('modal_position-commerical-lg-before')
+        modalEl.classList.add('modal_position-commerical-lg-before');
+        for (const el of orderCallBtn) {
+            el.removeEventListener('click', listenerFuncCommercial)
+        }
+
+        modalEl.classList.remove('modal_position-commerical-md-after');
+        modalEl.classList.remove('modal_position-commercial-md-after-animation');
+        modalEl.classList.remove('modal_position-commerical-md-before');
         for (const el of orderCallBtn) {
             el.addEventListener('click', function (ev) {
-                modalEl.style.display = 'block';
-                modalEl.style.position = 'absolute';
-                modalEl.style.right = 0;
-                modalEl.style.top = 0;
+
+                modalEl.classList.add('modal_position-commerical-lg-after');
                 mainContent.style.display = 'block';
                 mainContent.style.opacity = 0.01;
                 footer.style.display = 'block';
