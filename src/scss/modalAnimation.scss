@@ -1,0 +1,37 @@
+.modal_position-commerical-md-before {
+    left: -1000px;
+}
+.modal_position-commerical-md-after {
+    animation: animationLink 2s  ;
+}
+@keyframes animationLink {
+    from {
+        left: -1000px;
+        
+    }
+    to {
+        left: 0px;
+        
+    }
+}
+
+.modal_position-commercial-md-after-animation {
+animation: animationLinkAfter 5s ;
+animation-fill-mode: forwards;
+}
+
+@keyframes animationLinkAfter {
+    from {
+        left: 0;
+        top: 0px;
+    }
+    to {
+        left: -1000px;
+       
+    }
+}
+
+.modal_position-commerical-lg-before {
+}
+.modal_position-commerical-lg-after {
+}
