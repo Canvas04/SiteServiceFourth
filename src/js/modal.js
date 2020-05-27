@@ -22,8 +22,8 @@ const listenerFuncCommercial = function (ev) {
     }
     mainContent.style.display = 'none';
     footer.style.display = 'none';
-    modalEl.classList.remove('modal_position-commerical-md-before')
-    modalEl.classList.add('modal_position-commerical-md-after')
+    modalEl.classList.remove('modal_position-commerical-md-before');
+    modalEl.classList.add('modal_position-commerical-md-after');
 
 }
 commercialLink.addEventListener('click', listenerFuncCommercial);
@@ -44,7 +44,12 @@ for (const el of orderCallBtn) {
         modalHeaderEl.textContent = 'Заказать звонок';
         mainContent.style.display = 'none';
         footer.style.display = 'none';
-        modalEl.style.display = 'block';
+
+        ('modal_position-commerical-md-before');
+        modalEl.classList.add('modal_position-commerical-md-after');
+        modalEl.style.animationFillMode = 'forwards';
+        modalEl.style.height = '100%'
+
         for (let el of modalHiddenInput) {
             el.style.display = 'none'
         }
@@ -62,7 +67,7 @@ if (matchMedia) {
 }
 function screenWidth(mq) {
     if (mq.matches) {
-       modalEl.classList.add('modal_position-commerical-lg-before')
+        modalEl.classList.add('modal_position-commerical-lg-before')
         for (const el of orderCallBtn) {
             el.addEventListener('click', function (ev) {
                 modalEl.style.display = 'block';
