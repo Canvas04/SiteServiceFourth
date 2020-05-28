@@ -1698,9 +1698,9 @@ span[aria-label='Go to slide 6'] {
     height: 100%;
     max-width: 400px; }
   .modal__icon {
-    position: relative;
+    position: absolute;
     left: -90px;
-    top: 36px; }
+    top: 15px; }
   .modal-feedback__input_margin {
     margin-left: 22px;
     margin-right: 22px; }
@@ -1983,6 +1983,72 @@ span[aria-label='Go to slide 6'] {
   .footer {
     margin-left: 352px;
     margin-right: 32px; } }
+
+.modal_position-commerical-md-before {
+  left: -1000px; }
+
+.modal_position-commerical-md-after {
+  -webkit-animation: animationLink 2s;
+          animation: animationLink 2s; }
+
+@-webkit-keyframes animationLink {
+  from {
+    left: -1000px; }
+  to {
+    left: 0px; } }
+
+@keyframes animationLink {
+  from {
+    left: -1000px; }
+  to {
+    left: 0px; } }
+
+.modal_position-commercial-md-after-animation {
+  -webkit-animation: animationLinkAfter 5s;
+          animation: animationLinkAfter 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes animationLinkAfter {
+  from {
+    left: 0;
+    top: 0px; }
+  to {
+    left: -1000px; } }
+
+@keyframes animationLinkAfter {
+  from {
+    left: 0;
+    top: 0px; }
+  to {
+    left: -1000px; } }
+
+.modal_position-commerical-lg-before {
+  right: -3000px; }
+
+.modal_position-commerical-lg-after {
+  -webkit-animation: animationLG 2s ease-in;
+          animation: animationLG 2s ease-in; }
+
+@-webkit-keyframes animationLG {
+  from {
+    right: -3000px;
+    width: 0px;
+    top: 0; }
+  to {
+    right: 0;
+    width: 400px;
+    top: 0; } }
+
+@keyframes animationLG {
+  from {
+    right: -3000px;
+    width: 0px;
+    top: 0; }
+  to {
+    right: 0;
+    width: 400px;
+    top: 0; } }
 
 @font-face {
   font-family: 'swiper-icons';

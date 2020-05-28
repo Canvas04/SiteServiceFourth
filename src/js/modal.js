@@ -107,11 +107,10 @@ function screenWidth(mq) {
         });
         commercialLink.addEventListener('click', function (ev) {
             ev.preventDefault();
-            commercialLink.removeEventListener('click', listenerFuncCommercial)
-            modalEl.classList.remove('modal_position-commerical-md-after');
-            modalEl.classList.remove('modal_position-commerical-md-before');
-            modalEl.classList.add('modal_position-commerical-lg-before');
-            modalEl.classList.add('modal_position-commerical-lg-after')
+            commercialLink.removeEventListener('click', listenerFuncCommercial);
+            
+            modalEl.classList.add('modal_position-commerical-lg-after');
+            modalEl.style.animationFillMode = 'forwards';
             modalHeaderEl.textContent = 'Обратная связь';
             mainContent.style.display = 'block';
             mainContent.style.opacity = 0.01;
