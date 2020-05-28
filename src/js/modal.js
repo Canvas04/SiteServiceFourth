@@ -32,7 +32,7 @@ const listenerFuncBtn = function (ev) {
     mainContent.style.display = 'none';
     footer.style.display = 'none';
 
-    ('modal_position-commerical-md-before');
+
     modalEl.classList.add('modal_position-commerical-md-after');
     modalEl.style.animationFillMode = 'forwards';
     modalEl.style.height = '100%'
@@ -79,10 +79,12 @@ function screenWidth(mq) {
         modalEl.classList.remove('modal_position-commerical-md-after');
         modalEl.classList.remove('modal_position-commercial-md-after-animation');
         modalEl.classList.remove('modal_position-commerical-md-before');
-        for (const el of orderCallBtn) {
+        for (let el of orderCallBtn) {
             el.addEventListener('click', function (ev) {
+                //  modalEl.classList.remove('modal_position-commerical-lg-before')
+                    modalEl.classList.add('modal_position-commerical-lg-after');
+                
 
-                modalEl.classList.add('modal_position-commerical-lg-after');
                 mainContent.style.display = 'block';
                 mainContent.style.opacity = 0.01;
                 footer.style.display = 'block';
@@ -93,12 +95,11 @@ function screenWidth(mq) {
 
             });
 
+
         }
         closeModalEl.addEventListener('click', function (ev) {
 
-            // modalEl.style.left = '-1000px';
-            // modalEl.style.transitionProperty = 'left';
-            // modalEl.style.transitionDuration = '2s';
+
 
             mainContent.style.opacity = 1;
             footer.style.opacity = 1;

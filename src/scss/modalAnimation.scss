@@ -2,22 +2,20 @@
     left: -1000px;
 }
 .modal_position-commerical-md-after {
-    animation: animationLink 2s  ;
+    animation: animationLink 2s;
 }
 @keyframes animationLink {
     from {
         left: -1000px;
-        
     }
     to {
         left: 0px;
-        
     }
 }
 
 .modal_position-commercial-md-after-animation {
-animation: animationLinkAfter 5s ;
-animation-fill-mode: forwards;
+    animation: animationLinkAfter 5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes animationLinkAfter {
@@ -27,26 +25,26 @@ animation-fill-mode: forwards;
     }
     to {
         left: -1000px;
-       
     }
 }
 
 .modal_position-commerical-lg-before {
-
-right: -1000px;
+    right: -3000px;
 }
-
 
 .modal_position-commerical-lg-after {
-animation: animationLg 5s;
+    animation: animationLG 2s ease-in;
 }
 @keyframes animationLG {
-    from {
-        right: -500px;
-        top: 0px;
-    }
-    to {
-        right: 0px;
-        top: 0px;
-    }
+   from{
+right: -3000px;
+width: 0px;
+top: 0;
+   }
+
+   to {
+       right: 0;
+       width: 400px;
+       top: 0;
+   }
 }
