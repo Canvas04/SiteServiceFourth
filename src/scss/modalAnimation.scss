@@ -48,3 +48,18 @@ top: 0;
        top: 0;
    }
 }
+.modal_position-commerical-close-after {
+    animation: animationFinished 10s;
+}
+@keyframes animationFinished {
+    from {
+        right: 0;
+        width: 400px;
+        top: 0;
+    }
+    to {
+        right: -3000px;
+        width: 0px;
+        top: 0;  
+    }
+}

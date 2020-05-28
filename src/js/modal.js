@@ -82,8 +82,8 @@ function screenWidth(mq) {
         for (let el of orderCallBtn) {
             el.addEventListener('click', function (ev) {
                 //  modalEl.classList.remove('modal_position-commerical-lg-before')
-                    modalEl.classList.add('modal_position-commerical-lg-after');
-                
+                modalEl.classList.add('modal_position-commerical-lg-after');
+
 
                 mainContent.style.display = 'block';
                 mainContent.style.opacity = 0.01;
@@ -98,7 +98,7 @@ function screenWidth(mq) {
 
         }
         closeModalEl.addEventListener('click', function (ev) {
-
+            modalEl.classList.add('modal_position-commerical-close-after')
 
 
             mainContent.style.opacity = 1;
@@ -108,7 +108,7 @@ function screenWidth(mq) {
         commercialLink.addEventListener('click', function (ev) {
             ev.preventDefault();
             commercialLink.removeEventListener('click', listenerFuncCommercial);
-            
+
             modalEl.classList.add('modal_position-commerical-lg-after');
             modalEl.style.animationFillMode = 'forwards';
             modalHeaderEl.textContent = 'Обратная связь';
