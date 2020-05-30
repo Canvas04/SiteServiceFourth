@@ -2027,27 +2027,25 @@ span[aria-label='Go to slide 6'] {
   right: -3000px; }
 
 .modal_position-commerical-lg-after {
-  -webkit-animation: animationLG 2s ease-in;
-          animation: animationLG 2s ease-in; }
+  -webkit-animation: animationLG 3s;
+          animation: animationLG 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 @-webkit-keyframes animationLG {
   from {
-    right: -3000px;
-    width: 0px;
+    right: -1000px;
     top: 0; }
   to {
     right: 0;
-    width: 400px;
     top: 0; } }
 
 @keyframes animationLG {
   from {
-    right: -3000px;
-    width: 0px;
+    right: -1000px;
     top: 0; }
   to {
     right: 0;
-    width: 400px;
     top: 0; } }
 
 .modal_position-commerical-close-after {
@@ -2057,21 +2055,17 @@ span[aria-label='Go to slide 6'] {
 @-webkit-keyframes animationFinished {
   from {
     right: 0;
-    width: 400px;
     top: 0; }
   to {
     right: -3000px;
-    width: 0px;
     top: 0; } }
 
 @keyframes animationFinished {
   from {
     right: 0;
-    width: 400px;
     top: 0; }
   to {
     right: -3000px;
-    width: 0px;
     top: 0; } }
 
 @font-face {
