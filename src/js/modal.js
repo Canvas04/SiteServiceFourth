@@ -28,44 +28,31 @@ const listenerFuncCommercial = function (ev) {
 
 }
 
-const listenerFuncBtn = function (ev) {
-    ev.preventDefault()
-    modalHeaderEl.textContent = 'Заказать звонок';
-    mainContent.style.display = 'none';
-    footer.style.display = 'none';
+for (let el of orderCallBtn) {
+    el.addEventListener('click', function (ev) {
 
 
-    modalEl.classList.add('modal_position-commerical-md-after');
-    modalEl.style.animationFillMode = 'forwards';
+
+        modalHeaderEl.textContent = 'Заказать звонок';
+        mainContent.style.display = 'none';
+        footer.style.display = 'none';
+        modalEl.classList.remove('modal_position-commercial-md-after-animation');
+
+        modalEl.classList.add('modal_position-commerical-md-after');
+        modalEl.style.animationFillMode = 'forwards';
 
 
-    for (let el of modalHiddenInput) {
-        el.style.display = 'none'
-    }
+        for (let el of modalHiddenInput) {
+            el.style.display = 'none'
+        }
 
+
+
+
+
+    })
 }
 
-mainContent.addEventListener('click', function (ev) {
-    let targetElBtn = ev.target;
-    if (targetElBtn.classList == 'prices__btn') {
-        return
-
-    }
-
-    modalHeaderEl.textContent = 'Заказать звонок';
-    mainContent.style.display = 'none';
-    footer.style.display = 'none';
-    modalEl.classList.remove('modal_position-commercial-md-after-animation')
-
-    modalEl.classList.add('modal_position-commerical-md-after');
-    modalEl.style.animationFillMode = 'forwards';
-
-
-    for (let el of modalHiddenInput) {
-        el.style.display = 'none'
-    }
-    console.log(targetElBtn)
-})
 
 commercialLink.addEventListener('click', listenerFuncCommercial);
 
@@ -76,7 +63,7 @@ closeModalEl.addEventListener('click', function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commerical-md-before')
     modalEl.classList.add('modal_position-commercial-md-after-animation');
-    
+
 
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
@@ -97,52 +84,27 @@ if (matchMedia) {
 function screenWidth(mq) {
     if (mq.matches) {
         modalEl.classList.add('modal_position-commerical-lg-before');
-        for (const el of orderCallBtn) {
-            el.removeEventListener('click', listenerFuncCommercial)
-        }
-
         modalEl.classList.remove('modal_position-commerical-md-after');
         modalEl.classList.remove('modal_position-commercial-md-after-animation');
         modalEl.classList.remove('modal_position-commerical-md-before');
         for (let el of orderCallBtn) {
+
             el.addEventListener('click', function (ev) {
-                //  modalEl.classList.remove('modal_position-commerical-lg-before')
+                modalEl.classList.remove('modal_position-commerical-lg-before')
                 modalEl.classList.add('modal_position-commerical-lg-after');
-
-
+                popupMenu.style.opacity = 0.05;
                 mainContent.style.display = 'block';
-                mainContent.style.opacity = 0.01;
+                mainContent.style.position = 'fixed'
+                mainContent.style.opacity = 0.05;
+
                 footer.style.display = 'block';
-                footer.style.opacity = 0.01;
-                popupMenu.style.opacity = 0.01;
-                document.querySelector('input[type=tel]').focus()
-
-
-            });
-
-
+                footer.style.position = 'fixed';
+                footer.style.opacity = 0.05;
+                document.querySelector('input[type=tel]').focus();
+            })
         }
-        closeModalEl.addEventListener('click', function (ev) {
-            modalEl.classList.add('modal_position-commerical-close-after')
 
 
-            mainContent.style.opacity = 1;
-            footer.style.opacity = 1;
-            popupMenu.style.opacity = 1;
-        });
-        commercialLink.addEventListener('click', function (ev) {
-            ev.preventDefault();
-            commercialLink.removeEventListener('click', listenerFuncCommercial);
 
-            modalEl.classList.add('modal_position-commerical-lg-after');
-            modalEl.style.animationFillMode = 'forwards';
-            modalHeaderEl.textContent = 'Обратная связь';
-            mainContent.style.display = 'block';
-            mainContent.style.opacity = 0.01;
-            footer.style.display = 'block';
-            footer.style.opacity = 0.01;
-            popupMenu.style.opacity = 0.01;
-            document.querySelector('input[type=text]').focus();
-        })
     }
 }
