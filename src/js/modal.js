@@ -12,6 +12,7 @@ let modalHiddenInput = document.querySelectorAll('.modal__input_hidden');
 const orderCallBtn = document.querySelectorAll('.prices__btn');
 
 
+
 const listenerFuncCommercial = function (ev) {
     ev.preventDefault();
     modalHeaderEl.textContent = 'Обратная связь';
@@ -28,6 +29,7 @@ const listenerFuncCommercial = function (ev) {
 }
 
 const listenerFuncBtn = function (ev) {
+    ev.preventDefault()
     modalHeaderEl.textContent = 'Заказать звонок';
     mainContent.style.display = 'none';
     footer.style.display = 'none';
@@ -35,13 +37,36 @@ const listenerFuncBtn = function (ev) {
 
     modalEl.classList.add('modal_position-commerical-md-after');
     modalEl.style.animationFillMode = 'forwards';
-    modalEl.style.height = '100%'
+
 
     for (let el of modalHiddenInput) {
         el.style.display = 'none'
     }
 
 }
+
+mainContent.addEventListener('click', function (ev) {
+    let targetElBtn = ev.target;
+    if (targetElBtn.classList == 'prices__btn') {
+        return
+
+    }
+
+    modalHeaderEl.textContent = 'Заказать звонок';
+    mainContent.style.display = 'none';
+    footer.style.display = 'none';
+    modalEl.classList.remove('modal_position-commercial-md-after-animation')
+
+    modalEl.classList.add('modal_position-commerical-md-after');
+    modalEl.style.animationFillMode = 'forwards';
+
+
+    for (let el of modalHiddenInput) {
+        el.style.display = 'none'
+    }
+    console.log(targetElBtn)
+})
+
 commercialLink.addEventListener('click', listenerFuncCommercial);
 
 
@@ -51,6 +76,7 @@ closeModalEl.addEventListener('click', function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commerical-md-before')
     modalEl.classList.add('modal_position-commercial-md-after-animation');
+    
 
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
@@ -58,9 +84,8 @@ closeModalEl.addEventListener('click', function (ev) {
 
 
 
-for (const el of orderCallBtn) {
-    el.addEventListener('click', listenerFuncBtn);
-}
+
+
 
 // Для разрешения 1366px
 
