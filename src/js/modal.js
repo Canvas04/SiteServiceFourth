@@ -108,9 +108,10 @@ function screenWidth(mq) {
         }
 
         commercialLink.addEventListener('click', function (ev) {
-            modalEl.classList.remove('modal_position-commerical-lg-before')
-            modalEl.classList.add('modal_position-commerical-lg-after');
-            modalEl.classList.remove('modal_position-commerical-lg-after')
+            ev.preventDefault();
+                modalEl.classList.remove('modal_position-commerical-close-after');
+                modalEl.classList.remove('modal_position-commerical-md-after');
+                modalEl.classList.add('modal_position-commerical-lg-after');
             popupMenu.style.opacity = 0.05;
             mainContent.style.display = 'block';
             mainContent.style.position = 'fixed'
