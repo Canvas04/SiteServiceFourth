@@ -61,13 +61,6 @@ const listenerFuncClose = function (ev) {
     closeModalEl.removeEventListener('click', HandlerLgClose);
 }
 
-for (let el of orderCallBtn) {
-    el.addEventListener('click', listenerFuncBtn);
-
-};
-commercialLink.addEventListener('click', listenerFuncCommercial);
-closeModalEl.addEventListener('click', listenerFuncClose);
-
 
 
 
@@ -75,32 +68,21 @@ closeModalEl.addEventListener('click', listenerFuncClose);
 
 // Для разрешения 1366px
 
-if (matchMedia) {
-    const mq = window.matchMedia('(min-width: 1366px)');
-    mq.addListener(screenWidth);
-    screenWidth(mq);
+// if (matchMedia) {
+//     const mq = window.matchMedia('(min-width: 1366px)');
+//     mq.addListener(screenWidth);
+//     screenWidth(mq);
 
-}
-function screenWidth(mq) {
-    if (mq.matches) {
-
-
-        modalEl.classList.remove('modal_position-commerical-md-after');
-        modalEl.classList.remove('modal_position-commercial-md-after-animation');
-        modalEl.classList.remove('modal_position-commerical-md-before');
-        modalEl.classList.add('modal_position-commerical-lg-before');
-        for (let el of orderCallBtn) {
-            el.addEventListener('click', HandlerBtnLgOpen);
-        };
-
-        commercialLink.addEventListener('click', HandlerLinkLgOpen);
-
-        closeModalEl.addEventListener('click', HandlerLgClose);
+// }
+// function screenWidth(mq) {
+//     if (mq.matches) {
 
 
 
-    }
-}
+
+
+//     }
+// }
 
 const HandlerBtnLgOpen = function (ev) {
     ev.preventDefault();
@@ -108,7 +90,7 @@ const HandlerBtnLgOpen = function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.add('modal_position-commerical-lg-after');
     modalEl.style.position = 'fixed'
-    console.log('Анимация работает')
+    
     popupMenu.style.opacity = 0.05;
     mainContent.style.display = 'block';
     mainContent.style.position = 'fixed';
@@ -159,9 +141,26 @@ let HandlerLgClose = function (ev) {
 
 let timerId = setTimeout(function resize() {
     if (window.matchMedia("(min-width: 1366px)").matches) {
-        console.log('Anton');
+
+        modalEl.classList.remove('modal_position-commerical-md-after');
+        modalEl.classList.remove('modal_position-commercial-md-after-animation');
+        modalEl.classList.remove('modal_position-commerical-md-before');
+        modalEl.classList.add('modal_position-commerical-lg-before');
+        for (let el of orderCallBtn) {
+            el.addEventListener('click', HandlerBtnLgOpen);
+        };
+        commercialLink.addEventListener('click', HandlerLinkLgOpen);
+        closeModalEl.addEventListener('click', HandlerLgClose);
+
+
     } else {
-        console.log('Ruslan')
+
+        for (let el of orderCallBtn) {
+            el.addEventListener('click', listenerFuncBtn);
+
+        };
+        commercialLink.addEventListener('click', listenerFuncCommercial);
+        closeModalEl.addEventListener('click', listenerFuncClose);
     }
-    timerId = setTimeout(resize, 2000); 
-  }, 2000);
+    timerId = setTimeout(resize, 0);
+}, 0);
