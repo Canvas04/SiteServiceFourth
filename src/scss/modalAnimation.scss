@@ -15,7 +15,7 @@
 }
 
 .modal_position-commercial-md-after-animation {
-    animation: animationLinkAfter 5s;
+    animation: animationLinkAfter 2s;
     animation-fill-mode: forwards;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .modal_position-commerical-lg-after {
-    animation: animationLG 3s;
+    animation: animationLG 2s;
     
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -54,7 +54,7 @@
     }
 }
 .modal_position-commerical-close-after {
-    animation: animationFinished 6s;
+    animation: animationFinished 2s;
     animation-fill-mode: forwards;
 }
 @keyframes animationFinished {
