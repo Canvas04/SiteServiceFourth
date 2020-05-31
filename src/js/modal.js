@@ -26,6 +26,9 @@ const listenerFuncCommercial = function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-before');
     modalEl.classList.add('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commercial-md-after-animation');
+    modalEl.classList.remove('modal_position-commerical-lg-before');
+    modalEl.classList.remove('modal_position-commerical-lg-after');
+    modalEl.classList.remove('modal_position-commerical-close-after');
 }
 
 for (let el of orderCallBtn) {
@@ -44,7 +47,9 @@ for (let el of orderCallBtn) {
             el.style.display = 'none'
         }
 
-
+        modalEl.classList.remove('modal_position-commerical-lg-before');
+        modalEl.classList.remove('modal_position-commerical-lg-after');
+        modalEl.classList.remove('modal_position-commerical-close-after');
 
 
 
@@ -61,7 +66,9 @@ closeModalEl.addEventListener('click', function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commerical-md-before')
     modalEl.classList.add('modal_position-commercial-md-after-animation');
-    // modalEl.classList.remove('modal_position-commercial-md-after-animation');
+    modalEl.classList.remove('modal_position-commerical-lg-before');
+    modalEl.classList.remove('modal_position-commerical-lg-after');
+    modalEl.classList.remove('modal_position-commerical-close-after');
 
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
