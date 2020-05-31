@@ -2006,8 +2006,8 @@ span[aria-label='Go to slide 6'] {
     left: 0px; } }
 
 .modal_position-commercial-md-after-animation {
-  -webkit-animation: animationLinkAfter 5s;
-          animation: animationLinkAfter 5s;
+  -webkit-animation: animationLinkAfter 2s;
+          animation: animationLinkAfter 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
@@ -2029,8 +2029,8 @@ span[aria-label='Go to slide 6'] {
   right: -1000px; }
 
 .modal_position-commerical-lg-after {
-  -webkit-animation: animationLG 3s;
-          animation: animationLG 3s;
+  -webkit-animation: animationLG 2s;
+          animation: animationLG 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: linear;
@@ -2051,8 +2051,8 @@ span[aria-label='Go to slide 6'] {
     right: 0px; } }
 
 .modal_position-commerical-close-after {
-  -webkit-animation: animationFinished 6s;
-          animation: animationFinished 6s;
+  -webkit-animation: animationFinished 2s;
+          animation: animationFinished 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
