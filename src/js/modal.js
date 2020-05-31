@@ -90,7 +90,7 @@ const HandlerBtnLgOpen = function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.add('modal_position-commerical-lg-after');
     modalEl.style.position = 'fixed'
-    
+
     popupMenu.style.opacity = 0.05;
     mainContent.style.display = 'block';
     mainContent.style.position = 'fixed';
@@ -164,3 +164,13 @@ let timerId = setTimeout(function resize() {
     }
     timerId = setTimeout(resize, 0);
 }, 0);
+
+
+let timer1 = setTimeout(function resize1() {
+
+    mainContent.addEventListener('click', function (ev) {
+        window.location.reload();
+    });
+
+    timer1 = setTimeout(resize1, 10000)
+}, 10000);
