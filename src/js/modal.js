@@ -29,50 +29,44 @@ const listenerFuncCommercial = function (ev) {
     modalEl.classList.remove('modal_position-commerical-lg-before');
     modalEl.classList.remove('modal_position-commerical-lg-after');
     modalEl.classList.remove('modal_position-commerical-close-after');
+    commercialLink.removeEventListener('click', HandlerLinkLgOpen);
 }
 
-for (let el of orderCallBtn) {
-    el.addEventListener('click', function (ev) {
-
-
-
-        modalHeaderEl.textContent = 'Заказать звонок';
-        mainContent.style.display = 'none';
-        footer.style.display = 'none';
-        modalEl.classList.remove('modal_position-commercial-md-after-animation');
-        modalEl.classList.add('modal_position-commerical-md-after');
-      
-
-        for (let el of modalHiddenInput) {
-            el.style.display = 'none'
-        }
-
-        modalEl.classList.remove('modal_position-commerical-lg-before');
-        modalEl.classList.remove('modal_position-commerical-lg-after');
-        modalEl.classList.remove('modal_position-commerical-close-after');
-
-
-
-    })
+const listenerFuncBtn = function (ev) {
+    modalHeaderEl.textContent = 'Заказать звонок';
+    mainContent.style.display = 'none';
+    footer.style.display = 'none';
+    modalEl.classList.remove('modal_position-commercial-md-after-animation');
+    modalEl.classList.add('modal_position-commerical-md-after');
+    for (let el of modalHiddenInput) {
+        el.style.display = 'none'
+    }
+    modalEl.classList.remove('modal_position-commerical-lg-before');
+    modalEl.classList.remove('modal_position-commerical-lg-after');
+    modalEl.classList.remove('modal_position-commerical-close-after');
+    for (let el of orderCallBtn) {
+        el.removeEventListener('click', HandlerBtnLgOpen);
+    }
 }
 
-
-commercialLink.addEventListener('click', listenerFuncCommercial);
-
-
-
-
-closeModalEl.addEventListener('click', function (ev) {
+const listenerFuncClose = function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commerical-md-before')
     modalEl.classList.add('modal_position-commercial-md-after-animation');
     modalEl.classList.remove('modal_position-commerical-lg-before');
     modalEl.classList.remove('modal_position-commerical-lg-after');
     modalEl.classList.remove('modal_position-commerical-close-after');
-
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
-});
+    closeModalEl.removeEventListener('click', HandlerLgClose);
+}
+
+for (let el of orderCallBtn) {
+    el.addEventListener('click', listenerFuncBtn);
+
+};
+commercialLink.addEventListener('click', listenerFuncCommercial);
+closeModalEl.addEventListener('click', listenerFuncClose);
 
 
 
@@ -88,62 +82,74 @@ if (matchMedia) {
 }
 function screenWidth(mq) {
     if (mq.matches) {
-        
+
+
         modalEl.classList.remove('modal_position-commerical-md-after');
         modalEl.classList.remove('modal_position-commercial-md-after-animation');
         modalEl.classList.remove('modal_position-commerical-md-before');
-        modalEl.classList.add('modal_position-commerical-lg-before')
+        modalEl.classList.add('modal_position-commerical-lg-before');
         for (let el of orderCallBtn) {
+ el.addEventListener('click', HandlerBtnLgOpen);
+};
 
-            el.addEventListener('click', function (ev) {
-              ev.preventDefault();
-                modalEl.classList.remove('modal_position-commerical-close-after');
-                modalEl.classList.remove('modal_position-commerical-md-after');
-                modalEl.classList.add('modal_position-commerical-lg-after');
-                modalEl.style.position = 'fixed'
-            console.log('Анимация работает')
-                popupMenu.style.opacity = 0.05;
-                mainContent.style.display = 'block';
-                mainContent.style.position = 'fixed';
-                mainContent.style.opacity = 0.05;
+        commercialLink.addEventListener('click', HandlerLinkLgOpen);
 
-                footer.style.display = 'block';
-                footer.style.position = 'fixed';
-                footer.style.opacity = 0.05;
-                document.querySelector('input[type=tel]').focus();
-            })
-        }
+        closeModalEl.addEventListener('click', HandlerLgClose);
 
-        commercialLink.addEventListener('click', function (ev) {
-            ev.preventDefault();
-                modalEl.classList.remove('modal_position-commerical-close-after');
-                modalEl.classList.remove('modal_position-commerical-md-after');
-                modalEl.classList.add('modal_position-commerical-lg-after');
-            popupMenu.style.opacity = 0.05;
-            mainContent.style.display = 'block';
-            mainContent.style.position = 'fixed'
-            mainContent.style.opacity = 0.05;
 
-            footer.style.display = 'block';
-            footer.style.position = 'fixed';
-            footer.style.opacity = 0.05;
-            document.querySelector('input[type=text]').focus();
-        })
 
-        closeModalEl.addEventListener('click', function (ev) {
-            modalEl.classList.remove('modal_position-commerical-lg-before');
-            modalEl.classList.remove('modal_position-commerical-lg-after');
-            modalEl.classList.remove('modal_position-commercial-md-after-animation');
-            modalEl.classList.add('modal_position-commerical-close-after');
-            mainContent.style.display = 'block';
-            mainContent.style.position = 'static';
-            footer.style.display = 'flex';
-            mainContent.style.opacity = 1;
-            footer.style.opacity = 1;
-            footer.style.position = 'static';
-            popupMenu.style.opacity = 1;
-
-        })
-       
     }
+}
+
+const HandlerBtnLgOpen = function (ev) {
+    ev.preventDefault();
+    modalEl.classList.remove('modal_position-commerical-close-after');
+    modalEl.classList.remove('modal_position-commerical-md-after');
+    modalEl.classList.add('modal_position-commerical-lg-after');
+    modalEl.style.position = 'fixed'
+    console.log('Анимация работает')
+    popupMenu.style.opacity = 0.05;
+    mainContent.style.display = 'block';
+    mainContent.style.position = 'fixed';
+    mainContent.style.opacity = 0.05;
+
+    footer.style.display = 'block';
+    footer.style.position = 'fixed';
+    footer.style.opacity = 0.05;
+    document.querySelector('input[type=tel]').focus();
+    for (let el of orderCallBtn) {
+        el.removeEventListener('click', listenerFuncBtn);
+    }
+}
+
+let HandlerLinkLgOpen = function (ev) {
+    ev.preventDefault();
+    modalEl.classList.remove('modal_position-commerical-close-after');
+    modalEl.classList.remove('modal_position-commerical-md-after');
+    modalEl.classList.add('modal_position-commerical-lg-after');
+    popupMenu.style.opacity = 0.05;
+    mainContent.style.display = 'block';
+    mainContent.style.position = 'fixed'
+    mainContent.style.opacity = 0.05;
+
+    footer.style.display = 'block';
+    footer.style.position = 'fixed';
+    footer.style.opacity = 0.05;
+    document.querySelector('input[type=text]').focus();
+    commercialLink.removeEventListener('click', listenerFuncCommercial);
+}
+
+let HandlerLgClose = function (ev) {
+    modalEl.classList.remove('modal_position-commerical-lg-before');
+    modalEl.classList.remove('modal_position-commerical-lg-after');
+    modalEl.classList.remove('modal_position-commercial-md-after-animation');
+    modalEl.classList.add('modal_position-commerical-close-after');
+    mainContent.style.display = 'block';
+    mainContent.style.position = 'static';
+    footer.style.display = 'flex';
+    mainContent.style.opacity = 1;
+    footer.style.opacity = 1;
+    footer.style.position = 'static';
+    popupMenu.style.opacity = 1;
+    closeModalEl.removeEventListener('click', listenerFuncClose);
 }
