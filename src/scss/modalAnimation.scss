@@ -3,6 +3,7 @@
 }
 .modal_position-commerical-md-after {
     animation: animationLink 2s;
+    animation-fill-mode: forwards;
 }
 @keyframes animationLink {
     from {

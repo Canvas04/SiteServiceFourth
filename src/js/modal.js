@@ -2,7 +2,7 @@ import { mainContent, footer, popupMenu } from './popup.js';
 
 let modalEl = document.querySelector('.modal');
 modalEl.style.position = 'absolute';
-modalEl.classList.add('modal_position-commerical-md-before')
+modalEl.classList.add('modal_position-commerical-md-before');
 
 const closeModalEl = document.querySelector('.modal__icon')
 const commercialLink = document.querySelector('.warn__link');
@@ -25,7 +25,7 @@ const listenerFuncCommercial = function (ev) {
     footer.style.display = 'none';
     modalEl.classList.remove('modal_position-commerical-md-before');
     modalEl.classList.add('modal_position-commerical-md-after');
-
+    modalEl.classList.remove('modal_position-commercial-md-after-animation');
 }
 
 for (let el of orderCallBtn) {
@@ -37,10 +37,8 @@ for (let el of orderCallBtn) {
         mainContent.style.display = 'none';
         footer.style.display = 'none';
         modalEl.classList.remove('modal_position-commercial-md-after-animation');
-
         modalEl.classList.add('modal_position-commerical-md-after');
-        modalEl.style.animationFillMode = 'forwards';
-
+      
 
         for (let el of modalHiddenInput) {
             el.style.display = 'none'
@@ -63,7 +61,7 @@ closeModalEl.addEventListener('click', function (ev) {
     modalEl.classList.remove('modal_position-commerical-md-after');
     modalEl.classList.remove('modal_position-commerical-md-before')
     modalEl.classList.add('modal_position-commercial-md-after-animation');
-
+    // modalEl.classList.remove('modal_position-commercial-md-after-animation');
 
     mainContent.style.display = 'block';
     footer.style.display = 'flex';
@@ -92,6 +90,7 @@ function screenWidth(mq) {
             el.addEventListener('click', function (ev) {
                 modalEl.classList.remove('modal_position-commerical-lg-before')
                 modalEl.classList.add('modal_position-commerical-lg-after');
+                modalEl.classList.remove('modal_position-commerical-lg-after')
                 popupMenu.style.opacity = 0.05;
                 mainContent.style.display = 'block';
                 mainContent.style.position = 'fixed'
@@ -107,6 +106,7 @@ function screenWidth(mq) {
         commercialLink.addEventListener('click', function (ev) {
             modalEl.classList.remove('modal_position-commerical-lg-before')
             modalEl.classList.add('modal_position-commerical-lg-after');
+            modalEl.classList.remove('modal_position-commerical-lg-after')
             popupMenu.style.opacity = 0.05;
             mainContent.style.display = 'block';
             mainContent.style.position = 'fixed'
@@ -127,6 +127,7 @@ function screenWidth(mq) {
             footer.style.opacity = 1;
             footer.style.position = 'static';
             popupMenu.style.opacity = 1;
+
         })
     }
 }
