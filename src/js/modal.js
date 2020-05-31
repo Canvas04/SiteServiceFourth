@@ -79,6 +79,7 @@ if (matchMedia) {
     const mq = window.matchMedia('(min-width: 1366px)');
     mq.addListener(screenWidth);
     screenWidth(mq);
+
 }
 function screenWidth(mq) {
     if (mq.matches) {
@@ -89,8 +90,8 @@ function screenWidth(mq) {
         modalEl.classList.remove('modal_position-commerical-md-before');
         modalEl.classList.add('modal_position-commerical-lg-before');
         for (let el of orderCallBtn) {
- el.addEventListener('click', HandlerBtnLgOpen);
-};
+            el.addEventListener('click', HandlerBtnLgOpen);
+        };
 
         commercialLink.addEventListener('click', HandlerLinkLgOpen);
 
@@ -153,3 +154,14 @@ let HandlerLgClose = function (ev) {
     popupMenu.style.opacity = 1;
     closeModalEl.removeEventListener('click', listenerFuncClose);
 }
+
+
+
+let timerId = setTimeout(function resize() {
+    if (window.matchMedia("(min-width: 1366px)").matches) {
+        console.log('Anton');
+    } else {
+        console.log('Ruslan')
+    }
+    timerId = setTimeout(resize, 2000); 
+  }, 2000);
