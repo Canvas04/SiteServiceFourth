@@ -30,37 +30,42 @@
 }
 
 .modal_position-commerical-lg-before {
-    right: -3000px;
+    right: -1000px;
+   
 }
 
 .modal_position-commerical-lg-after {
-    animation: animationLG 3s ;
-    animation-fill-mode: forwards;;
+    animation: animationLG 4s;
+    
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    right: 0;
+    transition: right 3s;
 }
 @keyframes animationLG {
-   from{
-right: -1000px;
-top: 0;
-   }
+    0% {
+      right: -1000px;
+      
+    }
 
-   to {
-       right: 0;
-       
-       top: 0;
-   }
+    100% {
+        right: 0px;
+      
+    }
 }
 .modal_position-commerical-close-after {
     animation: animationFinished 10s;
+    animation-fill-mode: forwards;
 }
 @keyframes animationFinished {
     from {
         right: 0;
-        
+
         top: 0;
     }
     to {
-        right: -3000px;
-        
-        top: 0;  
+        right: -1000px;
+
+        top: 0;
     }
 }

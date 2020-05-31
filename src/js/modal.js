@@ -1,7 +1,7 @@
 import { mainContent, footer, popupMenu } from './popup.js';
 
 let modalEl = document.querySelector('.modal');
-modalEl.style.position = 'absolute';
+modalEl.style.position = 'fixed';
 modalEl.classList.add('modal_position-commerical-md-before');
 
 const closeModalEl = document.querySelector('.modal__icon')
@@ -81,19 +81,23 @@ if (matchMedia) {
 }
 function screenWidth(mq) {
     if (mq.matches) {
-        modalEl.classList.add('modal_position-commerical-lg-before');
+        
         modalEl.classList.remove('modal_position-commerical-md-after');
         modalEl.classList.remove('modal_position-commercial-md-after-animation');
         modalEl.classList.remove('modal_position-commerical-md-before');
+        modalEl.classList.add('modal_position-commerical-lg-before')
         for (let el of orderCallBtn) {
 
             el.addEventListener('click', function (ev) {
-                modalEl.classList.remove('modal_position-commerical-lg-before')
+              ev.preventDefault();
+                modalEl.classList.remove('modal_position-commerical-close-after');
+                modalEl.classList.remove('modal_position-commerical-md-after');
                 modalEl.classList.add('modal_position-commerical-lg-after');
-                modalEl.classList.remove('modal_position-commerical-lg-after')
+                modalEl.style.position = 'fixed'
+            console.log('Анимация работает')
                 popupMenu.style.opacity = 0.05;
                 mainContent.style.display = 'block';
-                mainContent.style.position = 'fixed'
+                mainContent.style.position = 'fixed';
                 mainContent.style.opacity = 0.05;
 
                 footer.style.display = 'block';
@@ -119,7 +123,10 @@ function screenWidth(mq) {
         })
 
         closeModalEl.addEventListener('click', function (ev) {
-            modalEl.classList.add('modal_position-commerical-close-after')
+            modalEl.classList.remove('modal_position-commerical-lg-before');
+            modalEl.classList.remove('modal_position-commerical-lg-after');
+            modalEl.classList.remove('modal_position-commercial-md-after-animation');
+            modalEl.classList.add('modal_position-commerical-close-after');
             mainContent.style.display = 'block';
             mainContent.style.position = 'static';
             footer.style.display = 'flex';
@@ -129,5 +136,6 @@ function screenWidth(mq) {
             popupMenu.style.opacity = 1;
 
         })
+       
     }
 }
