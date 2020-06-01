@@ -70,20 +70,24 @@
 //     }
 // }
 
-.modal-open-js {
-    left: -1000px;
-    transition: left 2s;
+@media (max-width: 1365px) {
+    .modal-open-js {
+        left: -1000px;
+        transition: left 2s;
+    }
+    .modal-close-js {
+        left: 0;
+        transition: left 2s;
+    }
 }
+
 @media (min-width: 1366px) {
     .modal-open-js {
         right: -1000px;
         transition: right 2s;
     }
 }
-.modal-close-js {
-    left: 0;
-    transition: left 2s;
-}
+
 @media (min-width: 1366px) {
     .modal-close-js {
         right: 0;
@@ -121,8 +125,11 @@
         opacity: 0.05;
     }
 }
-.popup-before-animation {
-    
-}
-.popup-after-animation {
+@media (min-width: 1366px) {
+    .popup-before-animation {
+        opacity: 1;
+    }
+    .popup-after-animation {
+        opacity: 0.05;
+    }
 }

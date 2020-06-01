@@ -161,12 +161,14 @@ function listenerLinkOpen(ev) {
     modalEl.classList.add('modal-close-js');
     mainContent.classList.add('main-after-animation');
     footer.classList.add('footer-after-animation');
+    popupMenu.classList.add('popup-after-animation');
 }
 function listenerBtnOpen(ev) {
     modalEl.classList.remove('modal-open-js');
     modalEl.classList.add('modal-close-js');
     mainContent.classList.add('main-after-animation');
     footer.classList.add('footer-after-animation');
+    popupMenu.classList.add('popup-after-animation');
 }
 
 function listenerClose(ev) {
@@ -174,10 +176,12 @@ function listenerClose(ev) {
     modalEl.classList.add('modal-open-js');
     mainContent.classList.add('main-before-animation');
     footer.classList.add('footer-before-animation');
+    
+    popupMenu.classList.add('popup-before-animation');
     let timerId = setTimeout(function remove() {
         mainContent.classList.remove('main-after-animation');
         footer.classList.remove('footer-after-animation');
-     
+     popupMenu.classList.remove('popup-after-animation');
     }, 2000);
 }
 
