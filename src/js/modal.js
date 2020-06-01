@@ -167,17 +167,25 @@ function listenerBtnOpen(ev) {
     modalEl.classList.add('modal-close-js');
     mainContent.classList.add('main-after-animation');
     footer.classList.add('footer-after-animation');
-  }
+}
 
 function listenerClose(ev) {
     modalEl.classList.remove('modal-close-js');
     modalEl.classList.add('modal-open-js');
-   mainContent.classList.add('main-before-animation');
+    mainContent.classList.add('main-before-animation');
     footer.classList.add('footer-before-animation');
-    
+
 }
 commercialLink.addEventListener('click', listenerLinkOpen);
 for (let el of orderCallBtn) {
     el.addEventListener('click', listenerBtnOpen);
 }
 closeModalEl.addEventListener('click', listenerClose);
+
+let timerId = setTimeout(function remove() {
+    mainContent.classList.remove('main-after-animation');
+    footer.classList.remove('footer-after-animation');
+
+    timerId = setTimeout(remove, 8000)
+
+}, 8000)
