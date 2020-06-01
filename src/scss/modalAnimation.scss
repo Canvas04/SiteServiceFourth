@@ -92,22 +92,37 @@
 }
 
 .main-before-animation {
-display: block;
+    display: block;
+}
+@media (min-width: 1366px) {
 }
 .footer-before-animation {
-display: flex;
+    display: flex;
 }
-
+@media (min-width: 1366px) {
+}
 .main-after-animation {
-display: none;
+    display: none;
+}
+@media (min-width: 1366px) {
+    .main-after-animation {
+        display: block;
+        position: fixed;
+        opacity: 0.05;
+    }
 }
 .footer-after-animation {
-display: none;
+    display: none;
 }
-
+@media (min-width: 1366px) {
+    .footer-after-animation {
+        display: block;
+        position: fixed;
+        opacity: 0.05;
+    }
+}
 .popup-before-animation {
-
+    
 }
 .popup-after-animation {
-
 }

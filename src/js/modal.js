@@ -174,18 +174,17 @@ function listenerClose(ev) {
     modalEl.classList.add('modal-open-js');
     mainContent.classList.add('main-before-animation');
     footer.classList.add('footer-before-animation');
-
+    let timerId = setTimeout(function remove() {
+        mainContent.classList.remove('main-after-animation');
+        footer.classList.remove('footer-after-animation');
+     
+    }, 2000);
 }
+
 commercialLink.addEventListener('click', listenerLinkOpen);
 for (let el of orderCallBtn) {
     el.addEventListener('click', listenerBtnOpen);
 }
 closeModalEl.addEventListener('click', listenerClose);
 
-let timerId = setTimeout(function remove() {
-    mainContent.classList.remove('main-after-animation');
-    footer.classList.remove('footer-after-animation');
 
-    timerId = setTimeout(remove, 8000)
-
-}, 8000);
