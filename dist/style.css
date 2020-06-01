@@ -1984,18 +1984,18 @@ span[aria-label='Go to slide 6'] {
     margin-left: 352px;
     margin-right: 32px; } }
 
-.modal-open-js {
-  left: -1000px;
-  transition: left 2s; }
+@media (max-width: 1365px) {
+  .modal-open-js {
+    left: -1000px;
+    transition: left 2s; }
+  .modal-close-js {
+    left: 0;
+    transition: left 2s; } }
 
 @media (min-width: 1366px) {
   .modal-open-js {
     right: -1000px;
     transition: right 2s; } }
-
-.modal-close-js {
-  left: 0;
-  transition: left 2s; }
 
 @media (min-width: 1366px) {
   .modal-close-js {
@@ -2011,8 +2011,26 @@ span[aria-label='Go to slide 6'] {
 .main-after-animation {
   display: none; }
 
+@media (min-width: 1366px) {
+  .main-after-animation {
+    display: block;
+    position: fixed;
+    opacity: 0.05; } }
+
 .footer-after-animation {
   display: none; }
+
+@media (min-width: 1366px) {
+  .footer-after-animation {
+    display: block;
+    position: fixed;
+    opacity: 0.05; } }
+
+@media (min-width: 1366px) {
+  .popup-before-animation {
+    opacity: 1; }
+  .popup-after-animation {
+    opacity: 0.05; } }
 
 @font-face {
   font-family: 'swiper-icons';
