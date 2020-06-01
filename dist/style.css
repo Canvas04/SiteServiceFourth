@@ -1984,93 +1984,35 @@ span[aria-label='Go to slide 6'] {
     margin-left: 352px;
     margin-right: 32px; } }
 
-.modal_position-commerical-md-before {
-  left: -1000px; }
+.modal-open-js {
+  left: -1000px;
+  transition: left 2s; }
 
-.modal_position-commerical-md-after {
-  -webkit-animation: animationLink 2s;
-          animation: animationLink 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-@-webkit-keyframes animationLink {
-  from {
-    left: -1000px; }
-  to {
-    left: 0px; } }
-
-@keyframes animationLink {
-  from {
-    left: -1000px; }
-  to {
-    left: 0px; } }
-
-.modal_position-commercial-md-after-animation {
-  -webkit-animation: animationLinkAfter 2s;
-          animation: animationLinkAfter 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-@-webkit-keyframes animationLinkAfter {
-  from {
-    left: 0;
-    top: 0px; }
-  to {
-    left: -1000px; } }
-
-@keyframes animationLinkAfter {
-  from {
-    left: 0;
-    top: 0px; }
-  to {
-    left: -1000px; } }
-
-.modal_position-commerical-lg-before {
-  right: -1000px; }
-
-.modal_position-commerical-lg-after {
-  -webkit-animation: animationLG 2s;
-          animation: animationLG 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  right: 0;
-  transition: right 3s; }
-
-@-webkit-keyframes animationLG {
-  0% {
-    right: -1000px; }
-  100% {
-    right: 0px; } }
-
-@keyframes animationLG {
-  0% {
-    right: -1000px; }
-  100% {
-    right: 0px; } }
-
-.modal_position-commerical-close-after {
-  -webkit-animation: animationFinished 2s;
-          animation: animationFinished 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-@-webkit-keyframes animationFinished {
-  from {
-    right: 0;
-    top: 0; }
-  to {
+@media (min-width: 1366px) {
+  .modal-open-js {
     right: -1000px;
-    top: 0; } }
+    transition: right 2s; } }
 
-@keyframes animationFinished {
-  from {
+.modal-close-js {
+  left: 0;
+  transition: left 2s; }
+
+@media (min-width: 1366px) {
+  .modal-close-js {
     right: 0;
-    top: 0; }
-  to {
-    right: -1000px;
-    top: 0; } }
+    transition: right 2s; } }
+
+.main-before-animation {
+  display: block; }
+
+.footer-before-animation {
+  display: flex; }
+
+.main-after-animation {
+  display: none; }
+
+.footer-after-animation {
+  display: none; }
 
 @font-face {
   font-family: 'swiper-icons';

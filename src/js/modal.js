@@ -188,4 +188,4 @@ let timerId = setTimeout(function remove() {
 
     timerId = setTimeout(remove, 8000)
 
-}, 8000)
+}, 8000);
