@@ -1,71 +1,113 @@
-.modal_position-commerical-md-before {
+// .modal_position-commerical-md-before {
+//     left: -1000px;
+// }
+// .modal_position-commerical-md-after {
+//     animation: animationLink 2s;
+//     animation-fill-mode: forwards;
+// }
+// @keyframes animationLink {
+//     from {
+//         left: -1000px;
+//     }
+//     to {
+//         left: 0px;
+//     }
+// }
+
+// .modal_position-commercial-md-after-animation {
+//     animation: animationLinkAfter 2s;
+//     animation-fill-mode: forwards;
+// }
+
+// @keyframes animationLinkAfter {
+//     from {
+//         left: 0;
+//         top: 0px;
+//     }
+//     to {
+//         left: -1000px;
+//     }
+// }
+
+// .modal_position-commerical-lg-before {
+//     right: -1000px;
+
+// }
+
+// .modal_position-commerical-lg-after {
+//     animation: animationLG 2s;
+
+//     animation-fill-mode: forwards;
+//     animation-timing-function: linear;
+//     right: 0;
+//     transition: right 3s;
+// }
+// @keyframes animationLG {
+//     0% {
+//       right: -1000px;
+
+//     }
+
+//     100% {
+//         right: 0px;
+
+//     }
+// }
+// .modal_position-commerical-close-after {
+//     animation: animationFinished 2s;
+//     animation-fill-mode: forwards;
+// }
+// @keyframes animationFinished {
+//     from {
+//         right: 0;
+
+//         top: 0;
+//     }
+//     to {
+//         right: -1000px;
+
+//         top: 0;
+//     }
+// }
+
+.modal-open-js {
     left: -1000px;
+    transition: left 5s;
 }
-.modal_position-commerical-md-after {
-    animation: animationLink 2s;
-    animation-fill-mode: forwards;
-}
-@keyframes animationLink {
-    from {
-        left: -1000px;
-    }
-    to {
-        left: 0px;
-    }
-}
-
-.modal_position-commercial-md-after-animation {
-    animation: animationLinkAfter 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes animationLinkAfter {
-    from {
-        left: 0;
-        top: 0px;
-    }
-    to {
-        left: -1000px;
-    }
-}
-
-.modal_position-commerical-lg-before {
-    right: -1000px;
-   
-}
-
-.modal_position-commerical-lg-after {
-    animation: animationLG 2s;
-    
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    right: 0;
-    transition: right 3s;
-}
-@keyframes animationLG {
-    0% {
-      right: -1000px;
-      
-    }
-
-    100% {
-        right: 0px;
-      
-    }
-}
-.modal_position-commerical-close-after {
-    animation: animationFinished 2s;
-    animation-fill-mode: forwards;
-}
-@keyframes animationFinished {
-    from {
-        right: 0;
-
-        top: 0;
-    }
-    to {
+@media (min-width: 1366px) {
+    .modal-open-js {
         right: -1000px;
-
-        top: 0;
+        transition: right 5s;
     }
+}
+.modal-close-js {
+    left: 0;
+    transition: left 3s;
+}
+@media (min-width: 1366px) {
+    .modal-close-js {
+        right: 0;
+        transition: right 3s;
+    }
+}
+
+.main-before-animation {
+display: block;
+}
+.footer-before-animation {
+display: flex;
+}
+
+.main-after-animation {
+display: none;
+}
+.footer-after-animation {
+display: none;
+}
+
+.popup-before-animation {
+
+}
+.popup-after-animation {
+
 }
