@@ -154,34 +154,34 @@ const orderCallBtn = document.querySelectorAll('.prices__btn');
 // }, 10000);
 
 
-modalEl.classList.add('modal-open-js');
+modalEl.classList.toggle('modal-open-js');
 
 function listenerLinkOpen(ev) {
-    modalEl.classList.remove('modal-open-js');
-    modalEl.classList.add('modal-close-js');
-    mainContent.classList.add('main-after-animation');
-    footer.classList.add('footer-after-animation');
-    popupMenu.classList.add('popup-after-animation');
+    modalEl.classList.toggle('modal-open-js', false);
+    modalEl.classList.toggle('modal-close-js');
+    mainContent.classList.toggle('main-after-animation');
+    footer.classList.toggle('footer-after-animation');
+    popupMenu.classList.toggle('popup-after-animation');
 }
 function listenerBtnOpen(ev) {
-    modalEl.classList.remove('modal-open-js');
-    modalEl.classList.add('modal-close-js');
-    mainContent.classList.add('main-after-animation');
-    footer.classList.add('footer-after-animation');
-    popupMenu.classList.add('popup-after-animation');
+    modalEl.classList.toggle('modal-open-js',false);
+    modalEl.classList.toggle('modal-close-js');
+    mainContent.classList.toggle('main-after-animation');
+    footer.classList.toggle('footer-after-animation');
+    popupMenu.classList.toggle('popup-after-animation');
 }
 
 function listenerClose(ev) {
-    modalEl.classList.remove('modal-close-js');
-    modalEl.classList.add('modal-open-js');
-    mainContent.classList.add('main-before-animation');
-    footer.classList.add('footer-before-animation');
+    modalEl.classList.toggle('modal-close-js',false);
+    modalEl.classList.toggle('modal-open-js');
+    mainContent.classList.toggle('main-before-animation');
+    footer.classList.toggle('footer-before-animation');
     
-    popupMenu.classList.add('popup-before-animation');
+    popupMenu.classList.toggle('popup-before-animation');
     let timerId = setTimeout(function remove() {
-        mainContent.classList.remove('main-after-animation');
-        footer.classList.remove('footer-after-animation');
-     popupMenu.classList.remove('popup-after-animation');
+        mainContent.classList.toggle('main-after-animation',false);
+        footer.classList.toggle('footer-after-animation',false);
+     popupMenu.classList.toggle('popup-after-animation',false);
     }, 2000);
 }
 
