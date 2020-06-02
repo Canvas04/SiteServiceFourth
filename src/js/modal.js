@@ -164,31 +164,31 @@ function listenerLinkOpen(ev) {
     popupMenu.classList.toggle('popup-after-animation');
 
     for (let el of modalHiddenInput) {
-                el.style.display = 'block'
-            }
+        el.style.display = 'block'
+    }
 }
 function listenerBtnOpen(ev) {
-    modalEl.classList.toggle('modal-open-js',false);
+    modalEl.classList.toggle('modal-open-js', false);
     modalEl.classList.toggle('modal-close-js');
     mainContent.classList.toggle('main-after-animation');
     footer.classList.toggle('footer-after-animation');
     popupMenu.classList.toggle('popup-after-animation');
     for (let el of modalHiddenInput) {
-                el.style.display = 'none'
-            }
+        el.style.display = 'none'
+    }
 }
 
 function listenerClose(ev) {
-    modalEl.classList.toggle('modal-close-js',false);
+    modalEl.classList.toggle('modal-close-js', false);
     modalEl.classList.toggle('modal-open-js');
     mainContent.classList.toggle('main-before-animation');
     footer.classList.toggle('footer-before-animation');
-    
+
     popupMenu.classList.toggle('popup-before-animation');
     let timerId = setTimeout(function remove() {
-        mainContent.classList.toggle('main-after-animation',false);
-        footer.classList.toggle('footer-after-animation',false);
-     popupMenu.classList.toggle('popup-after-animation',false);
+        mainContent.classList.toggle('main-after-animation', false);
+        footer.classList.toggle('footer-after-animation', false);
+        popupMenu.classList.toggle('popup-after-animation', false);
     }, 2000);
 }
 
