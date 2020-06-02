@@ -162,6 +162,10 @@ function listenerLinkOpen(ev) {
     mainContent.classList.toggle('main-after-animation');
     footer.classList.toggle('footer-after-animation');
     popupMenu.classList.toggle('popup-after-animation');
+
+    for (let el of modalHiddenInput) {
+                el.style.display = 'block'
+            }
 }
 function listenerBtnOpen(ev) {
     modalEl.classList.toggle('modal-open-js',false);
@@ -169,6 +173,9 @@ function listenerBtnOpen(ev) {
     mainContent.classList.toggle('main-after-animation');
     footer.classList.toggle('footer-after-animation');
     popupMenu.classList.toggle('popup-after-animation');
+    for (let el of modalHiddenInput) {
+                el.style.display = 'none'
+            }
 }
 
 function listenerClose(ev) {
