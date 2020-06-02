@@ -1553,7 +1553,7 @@ span[aria-label='Go to slide 6'] {
 
 @media (min-width: 768px) {
   .popup__minor-icons {
-    margin-top: 200px; }
+    margin-top: 150px; }
   .popup {
     height: 100%; } }
 
@@ -1574,17 +1574,17 @@ span[aria-label='Go to slide 6'] {
   font-size: 16px;
   color: #1B1C21;
   line-height: 24px;
-  letter-spacing: -0.2px; }
+  letter-spacing: -0.2px;
+  margin-bottom: 12px; }
 
-.footer-popup__item_tel {
+.footer__item_tel {
   font-size: 24px;
   list-style: 32px;
   color: #1B1C21;
   letter-spacing: -0.6px;
   flex-basis: 50%;
   font-weight: bold;
-  margin-bottom: 40px;
-  margin-top: 12px; }
+  margin-bottom: 40px; }
 
 .footer-popup__item_lang {
   color: #1B1C21;
